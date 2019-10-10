@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-8 text-left">
-            <img class="mb-4" src="/assets/img/logo-trans-nova.png" alt="Brazilian Teste" height="72">
+            <img class="mb-4" src="../assets/img/logo-trans-nova.png" alt="Brazilian Teste" height="72">
         </div>
         <div class="col-4 text-right" style="display: flex;align-items: center;" >
             <span class="text-white font-weight-bold" style="margin-left: 60%;"><?php echo "Bem Vindo ".$usuario->nome; ?></span>
@@ -51,7 +51,7 @@
                                 <a href="editar.php?codigo=<?php echo $value->id; ?>" class="btn btn-info" >
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <a href="" class="btn btn-danger">
+                                <a href="delete.php?id=<?php echo $value->id; ?>" class="btn btn-danger">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
                             </td>

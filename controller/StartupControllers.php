@@ -1,5 +1,5 @@
 <?php 
-    include('../dao/usuarioDAO.php');
+    include_once('../dao/usuarioDAO.php');
     class StartupController{
 
         public $usuarioDao;

@@ -12,7 +12,7 @@
     include('header.php'); 
 ?>
 <form class="form-signin" method="POST" >
-    <img class="mb-4" src="/assets/img/logo-trans-nova.png" alt="Brazilian Teste" width="100%" height="72">
+    <img class="mb-4" src="../assets/img/logo-trans-nova.png" alt="Brazilian Teste" width="100%" height="72">
     <h1 class="h3 mb-3 font-weight-normal text-center text-white">Credenciais</h1>
     <?php echo isset($_SESSION['erro']['todo']) ? '<h4 class="text-danger">'.$_SESSION['erro']['todo'].'</h4>' : ''; ?>
     <label for="inputEmail" class="sr-only">E-mail</label>

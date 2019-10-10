@@ -22,7 +22,7 @@
             if (trim(MYSQL_HOST) == '') throw new exception('Não Existe Host Configurado');
             if (trim(MYSQL_DB_NAME) == '') throw new exception('Não Existe Nome do Banco Configurado');
             if (trim(MYSQL_USER) == '') throw new exception('Não Existe Usuario Configurado');
-            if (trim(MYSQL_PASSWORD) == '') throw new exception('Não Existe Senha Configurado');
+            //if (trim(MYSQL_PASSWORD) == '') throw new exception('Não Existe Senha Configurado');
         
             $this->host = MYSQL_HOST;
             $this->dbname = MYSQL_DB_NAME;

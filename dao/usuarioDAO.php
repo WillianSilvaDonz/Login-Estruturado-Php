@@ -115,7 +115,10 @@ class UsuarioDAO {
             if(trim($post['email']) == ''){
                 $erro['email'] = 'Campo Obrigatório!';
             }
-            if(trim($post['senha']) == '' && !isset($post['id'])){
+            if(trim($post['perfil']) == ''){
+                $erro['perfil'] = 'Campo Obrigatório!';
+            }
+            if(trim($post['senha']) == '' && (!isset($post['id']) || (isset($post['id']) && $post['id'] == ''))){
                 $erro['senha'] = 'Campo Obrigatório!';
             }
         }else{

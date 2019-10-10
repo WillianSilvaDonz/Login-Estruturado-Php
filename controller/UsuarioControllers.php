@@ -32,11 +32,18 @@
             }
         }
 
+        public function delete($id){
+            if(!isset($_COOKIE['lembreCard'])){
+                header('Location: login.php');
+            }
+            $this->usuarioDao->delete($id);
+            header('Location: lista.php');
+        }
+
         public function store($post){
             try{
                 $this->usuarioDao->load($post);
                 $erro = $this->usuarioDao->validate($post);
-                
                 if(count($erro) <= 0 && $this->usuarioDao->save()){
                     if(isset($post['id'])){
                         header('Location: lista.php');
@@ -44,10 +51,10 @@
                         header('Location: login.php');
                     }
                 }else{
-                    if(isset($post['id'])){
+                    if(isset($post['id']) && $post['id'] > 0){
                         return $this->getUsuario(intval($post['id']));
                     }
-                    $_SESSION['erro'] = $erro;
+                    return array('erro'=>$erro);
                     //header('Location: login.php');
                 }
             }catch (Exception $e) {
