@@ -36,7 +36,6 @@ class UsuarioDAO {
             if($this->usuario->getId() > 0){
                 $stmt->bindValue(':id', $this->usuario->getId());
             }
-            echo $stmt->queryString;
             $stmt->execute();
             
             $this->banco->commit();
